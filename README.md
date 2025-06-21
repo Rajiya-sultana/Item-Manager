@@ -1,113 +1,106 @@
 # 🧾 Item Manager – Internship Assignment for AMRR TechSols
 
-This is a React-based web application created for the internship assignment provided by **AMRR TechSols Pvt Ltd**.
+This is a React-based web application built for the internship assignment provided by **AMRR TechSols Pvt Ltd**.
 
-It includes:
-- A form to add new items
-- A page to view all items (including newly added ones)
-- A modal with full item details and an image carousel
-- An **Enquire** button that sends an email to a static email address via **EmailJS**
+It delivers:
+
+- A form to **add new items**
+- A page to **view all items** (static + user-added)
+- A modal with full item details and an **image carousel**
+- An **Enquire** button that sends an email to a static address via **EmailJS**
 
 ---
 
 ## ✨ Features
 
-✅ Add new item with:
-- Name  
-- Type (Shirt, Pant, Shoes, etc.)  
-- Description  
-- Cover image  
-- Additional images
-
-✅ View all items (static + dynamic)  
-✅ View full item details in a **modal with carousel**  
-✅ Click **Enquire** to send an email (via **EmailJS**)  
-✅ Toast notifications for feedback  
-✅ Clean responsive UI
+| Feature | Status |
+|---------|:------:|
+| Add Item (name, type, description, cover, gallery) | ✅ |
+| View Items list (static + dynamic) | ✅ |
+| Modal with carousel & description | ✅ |
+| “Enquire” → EmailJS integration | ✅ |
+| Toast notifications | ✅ |
+| Responsive UI (Tailwind) | ✅ |
 
 ---
 
 ## 📂 Folder Structure
 
-/src
-/components
-- ItemForm.jsx
-- ItemList.jsx
-- ItemModal.jsx
-/context
-- ItemContext.jsx
-/pages
-- AddItems.jsx
-- ViewItems.jsx
-App.jsx
-.env.example
-
-yaml
-Copy
-Edit
+```
+Item-Manager/
+├─ src/
+│  ├─ components/
+│  │  ├─ ItemForm.jsx
+│  │  ├─ ItemList.jsx
+│  │  └─ ItemModal.jsx
+│  ├─ context/
+│  │  └─ ItemContext.jsx
+│  ├─ pages/
+│  │  ├─ AddItems.jsx
+│  │  └─ ViewItems.jsx
+│  └─ App.jsx
+├─ .env.example
+├─ README.md
+└─ package.json
+```
 
 ---
 
 ## 💻 How to Run the Project
 
-### 1️⃣ Clone the repository:
-
 ```bash
+# 1️⃣ Clone the repository
 git clone https://github.com/Rajiya-sultana/Item-Manager.git
 cd Item-Manager
-2️⃣ Install dependencies:
-bash
-Copy
-Edit
+
+# 2️⃣ Install dependencies
 npm install
-3️⃣ Setup EmailJS credentials
-Create a .env file in the root and paste the following:
 
-env
-Copy
-Edit
-VITE_EMAILJS_SERVICE_ID=your_service_id_here
-VITE_EMAILJS_TEMPLATE_ID=your_template_id_here
-VITE_EMAILJS_PUBLIC_KEY=your_public_key_here
-If you'd like to test the email feature live, replace the values above with your actual EmailJS credentials.
+# 3️⃣ Add EmailJS credentials
+cp .env.example .env
+# then edit .env and fill in:
+# VITE_EMAILJS_SERVICE_ID=your_service_id
+# VITE_EMAILJS_TEMPLATE_ID=your_template_id
+# VITE_EMAILJS_PUBLIC_KEY=your_public_key
 
-4️⃣ Start the development server:
-bash
-Copy
-Edit
+# 4️⃣ Start the development server
 npm run dev
-📧 Enquiry Email (Bonus Feature ✅)
-When a user clicks the "Enquire" button inside the item modal:
+```
 
-An email is sent to a static email address via EmailJS
+---
 
-The email contains the item title and message
+## 📧 Enquiry Email (Bonus Feature ✅)
 
-A success/failure toast is shown after sending
+- Clicking **Enquire** inside the item modal triggers `emailjs.send()`
+- The email is sent to a **static email address** (configured via EmailJS template)
+- Toast notifications confirm success or failure
 
-You can configure the static recipient inside your EmailJS template.
+> 📌 You can change the email recipient directly in your EmailJS dashboard template.
 
-🎥 Optional Demo Video
-(Include a link to your Loom / Google Drive video here if you recorded one)
-Example: Watch Demo Video
+---
 
-🙋‍♀️ About Me
-I'm Rajiya Sultana, passionate about frontend development and React.
-This project demonstrates my understanding of:
+## 🙋‍♀️ About Me
 
-State management with context
+I’m **Rajiya Sultana**, a frontend developer passionate about React, TailwindCSS, and creating clean, functional interfaces.
 
-Working with modals and forms
+**Skills demonstrated in this project:**
 
-EmailJS integration
+- React state & context
+- Controlled forms & file inputs
+- Carousel integration
+- Modal handling
+- Toast messaging
+- Third-party API (EmailJS)
 
-Carousel UI with react-responsive-carousel
+---
 
-Real-world UI interactions
+## 📨 Contact
 
-📨 Contact
-If you’d like me to walk through the code or run a live demo:
+| | |
+|---|---|
+| **Email** | rjiyasultana4@gmail.com |
+| **GitHub** | [@Rajiya-sultana](https://github.com/Rajiya-sultana) |
 
-📧 Email: rjiyasultana4@gmail.com
+---
 
-💻 GitHub: @Rajiya-sultana
+**Thank you for reviewing my project! Let me know if you’d like a live walkthrough or demo.**
